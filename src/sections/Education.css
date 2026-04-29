@@ -1,0 +1,182 @@
+.education-section {
+    padding: 100px 10%;
+    min-height: 80vh;
+}
+
+.education-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.education-card {
+    padding: 30px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex: 1 1 300px;
+    max-width: 450px;
+}
+
+.view-cert {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.view-cert span {
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+    display: inline-block;
+}
+
+.education-card:hover .view-cert span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-purple);
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.edu-type {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+}
+
+.edu-title {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.edu-institution {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.edu-date {
+    font-size: 0.9rem;
+    color: var(--accent-purple);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.edu-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* --- Estilos del Cuadro Modal (Popup) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    /* Fondo muy oscuro para resaltar el PDF */
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    /* Asegura que esté por encima de TODO, incluso del menú */
+}
+
+.modal-content {
+    background: var(--glass-bg);
+    width: 90%;
+    max-width: 900px;
+    height: 85vh;
+    /* Ocupa buena parte de la pantalla */
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid var(--glass-border);
+    padding: 40px 20px 20px;
+    /* Deja espacio arriba para el botón de cerrar */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn 0.3s ease;
+    /* Pequeña animación al aparecer */
+}
+
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #ff5f56;
+    /* Se pone rojo al pasar el ratón */
+}
+
+.cert-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    /* Por si el PDF tarda en cargar */
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 80vh;
+        padding: 35px 10px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 80px 5%;
+    }
+}

@@ -1,0 +1,109 @@
+.skills-section {
+    padding: 100px 10%;
+    min-height: 100vh;
+}
+
+.soft-skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.soft-skills-list li {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.soft-skills-list li::marker {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill-card {
+    padding: 30px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex: 1 1 300px;
+    max-width: 450px;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category {
+    flex: 1 1 280px;
+    max-width: 450px;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* Sistema de cuadricula interna para los iconos (3 columnas) */
+.skills-icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 10px;
+    justify-items: center;
+}
+
+.skill-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto de Zoom al pasar el ratón por el icono */
+.skill-icon-box:hover {
+    transform: scale(1.15);
+}
+
+.skill-icon {
+    width: 55px;
+    height: 55px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.15));
+}
+
+.skill-name-icon {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* En celulares, ponemos solo 2 columnas de iconos para que no se aprieten */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 80px 5%;
+    }
+
+    .skills-icons-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
