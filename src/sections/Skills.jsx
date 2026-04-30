@@ -57,8 +57,8 @@ const Skills = () => {
                 { name: "REST APIs", icon: "https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" },
                 { name: "Microservicios", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" },
                 { name: "Apache Kafka", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" },
-                { name: "Scrum", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" },
-                { name: "Modelo en cascada", icon: "https://cdn-icons-png.flaticon.com/512/4149/4149676.png" },
+                { name: "Scrum", icon: "/public/scrum.png" },
+                { name: "Modelo en cascada", icon: "/public/cascada.png" },
                 { name: "Pruebas funcionales manuales", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" }
             ]
         },
